@@ -1,9 +1,19 @@
 import QtQuick 2.15
-import QtQuick.Window 2.15
+import QtQuick.Controls 2.15
 
-Window {
-    width: 640
-    height: 480
+ApplicationWindow
+{
+    id: window
+    width: 360
+    height: 640
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Available environment")
+
+    StackView
+    {
+        id: stackView
+        anchors.fill: parent
+        initialItem: ("StartForm.ui.qml")
+
+    }
 }
